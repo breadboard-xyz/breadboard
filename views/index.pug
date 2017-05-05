@@ -49,10 +49,17 @@ html(lang="en")
             code /ls/github.com/a7medkamel/taskmill-help.git
             | &nbsp;
             a.btn.btn-primary(href='http://localhost:8040/ls/github.com/a7medkamel/taskmill-help.git')
-              i.fa.fa-rocket &nbsp;&nbsp;
+              i.fa.fa-list-alt &nbsp;&nbsp;
               | Try it!
 
       .card
-        .card-header POST /pull/github.com/owner/repository.git
+        .card-header GET /pull/github.com/owner/repository.git
         .card-block
           p.card-text Updates the local copy of a given repository by pulling it from it's remote location.
+          p.card-text
+            | ex:
+            code /pull/github.com/a7medkamel/taskmill-help.git
+            | &nbsp;
+            a.btn.btn-primary(href='http://localhost:8040/pull/github.com/a7medkamel/taskmill-help.git')
+              i.fa.fa-git &nbsp;&nbsp;
+              | Try it!
