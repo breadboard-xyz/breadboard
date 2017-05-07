@@ -1,0 +1,18 @@
+{
+  "apps" : [{
+    "name"        : "gateway",
+    "script"      : "./node_modules/taskmill-core-gateway/index.js"
+  }, {
+    "name"       : "agent",
+    "script"      : "./node_modules/taskmill-core-agent/index.js"
+  }, {
+    "name"       : "logs",
+    "script"      : "./node_modules/taskmill-core-logs/index.js"
+  }, {
+    "name"       : "account",
+    "script"      : "./node_modules/taskmill-core-account/index.js"
+  }, {
+    "name"       : "codedb",
+    "script"      : "./node_modules/taskmill-core-codedb/index.js"
+  }]
+}
