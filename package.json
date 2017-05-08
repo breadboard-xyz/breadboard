@@ -30,6 +30,7 @@
     "taskmill-core-codedb": "git+https://github.com/a7medkamel/taskmill-core-codedb.git",
     "taskmill-core-gateway": "git+https://github.com/a7medkamel/taskmill-core-gateway.git",
     "taskmill-core-logs": "git+https://github.com/a7medkamel/taskmill-core-logs.git",
+    "taskmill-core-cron": "git+https://github.com/a7medkamel/taskmill-core-cron.git",
     "winston": "^2.3.1"
   }
 }
