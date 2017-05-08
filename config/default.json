@@ -1,0 +1,101 @@
+{
+  "account": {
+    "ip-whitelist": [],
+    "port": 8050
+  },
+  "agent": {
+    "allow-foreign-code": true,
+    "group-id": "64FD1450-AD09-4643-9A8E-CEB571DF0FE9",
+    "url": "http://localhost:8090"
+  },
+  "backend": {
+    "mongodb": {
+      "host": "localhost",
+      "password": "[PASSWORD]",
+      "port": 27017,
+      "user": "[USER]"
+    }
+  },
+  "codedb": {
+    "populate": {
+      "limit": 100
+    },
+    "pull-on-start": true,
+    "ttl": 86400,
+    "url": "http://localhost:8585",
+    "winston": "info"
+  },
+  "cron": {
+    "exec": {
+      "url": "http://localhost:8060"
+    },
+    "port": "8686",
+    "redis": {
+      "db": "1",
+      "host": "localhost",
+      "port": 6379
+    },
+    "winston": {
+      "level": "info"
+    }
+  },
+  "docker": {
+    "cloud": {
+      "key": null
+    }
+  },
+  "gateway": {
+    "port": 8070
+  },
+  "jwt": {
+    "expiresIn": 1800,
+    "key": "[SECRET]",
+    "public": "[PUBLIC]"
+  },
+  "log": {
+    "hostname": "localhost",
+    "max-age": 604800,
+    "port": 8787,
+    "protocol": "http"
+  },
+  "metering": {
+    "limits": {
+      "email": 50,
+      "phone": 5,
+      "run": 50000,
+      "sms": 10
+    },
+    "redis": {
+      "db": 2,
+      "host": "localhost",
+      "password": null,
+      "port": 6379
+    }
+  },
+  "mongo": {
+    "url": "mongodb://[USER]:[PASSWORD]@localhost/account"
+  },
+  "pubsub": {
+    "db": 1,
+    "host": "localhost",
+    "password": null,
+    "port": 6379
+  },
+  "relay": "http://localhost:8124",
+  "services": "http://__host.io:1337",
+  "tty": {
+    "url": "http://localhost:1337"
+  },
+  "universal-analytics": {
+    "id": null
+  },
+  "worker": {
+    "code-module": "taskmill-code-disk",
+    "image": "a7medkamel/taskmill-core-worker",
+    "log": false,
+    "max-idle": 600,
+    "max-memory": 256,
+    "mount": false,
+    "pull": true
+  }
+}
