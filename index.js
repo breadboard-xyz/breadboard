@@ -10,23 +10,23 @@ var Promise     = require('bluebird')
 
 require('./lib/rest').listen();
 
-Promise
-  .fromCallback((cb) => pm2.connect(cb))
-  .then(() => {
-    return Promise
-            .fromCallback((cb) => pm2.start(pm2_config, cb));
-  })
-  .then(() => {
-    // pm2.launchBus((err, bus) => {
-    //   bus.on('log:out', (data) => {
-    //   // bus.on('log:PM2', (data) => {
-    //     console.log(data);
-    //   });
-    // });
-  })
-  .catch((err) => {
-    winston.error(err);
-  })
-  .finally(() => {
-    pm2.disconnect();
-  });
+// Promise
+//   .fromCallback((cb) => pm2.connect(cb))
+//   .then(() => {
+//     return Promise
+//             .fromCallback((cb) => pm2.start(pm2_config, cb));
+//   })
+//   .then(() => {
+//     // pm2.launchBus((err, bus) => {
+//     //   bus.on('log:out', (data) => {
+//     //   // bus.on('log:PM2', (data) => {
+//     //     console.log(data);
+//     //   });
+//     // });
+//   })
+//   .catch((err) => {
+//     winston.error(err);
+//   })
+//   .finally(() => {
+//     pm2.disconnect();
+//   });
