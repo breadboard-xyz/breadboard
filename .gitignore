@@ -44,3 +44,5 @@ jspm_packages
 
 # used by codedb
 .db
+
+config/local.json
