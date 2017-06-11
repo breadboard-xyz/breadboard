@@ -46,3 +46,9 @@ jspm_packages
 .db
 
 config/local.json
+
+config/local.js
+
+data/key
+
+data/key.pub

@@ -1,7 +1,37 @@
 {
+  "session" : {
+    "keys" : [
+      "[SECRET]"
+    ]
+  },
   "account": {
     "ip-whitelist": [],
-    "port": 8050
+    "port": 8050,
+    "oauth" : {
+      "strategy"  : [
+        {
+          "module"        : "passport-github2",
+          "name"          : "github",
+          "callback"      : "https://account.breadboard.com/auth/github/callback",
+          "options"       : {
+            "clientID"          : "[GITHUB_APP_IP]",
+            "clientSecret"      : "[GITHUB_APP_SECRET]",
+            "authorizationURL"  : null, // "https://github.com/login/oauth/authorize",
+            "tokenURL"          : null, // "https://github.com/login/oauth/access_token",
+            "customHeaders"     : null, // {},
+            "userProfileURL"    : null, // "https://api.github.com/user",
+            "userEmailURL"      : null  // "https://api.github.com/user/emails"
+          },
+          "scope"         : [
+            "user:email",
+            "public_repo",
+            "repo",
+            "read:repo_hook",
+            "write:repo_hook"
+          ]
+        }
+      ]
+    }
   },
   "agent": {
     "allow-foreign-code": true,

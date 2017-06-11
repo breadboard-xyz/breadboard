@@ -6,60 +6,95 @@ html(lang="en")
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
 
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css", rel="stylesheet", integrity="sha256-y4TDcAD4/j5o4keZvggf698Cr9Oc7JZ+gGMax23qmVA=", crossorigin="anonymous")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/store2/2.5.1/store2.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", integrity="sha256-gL1ibrbVcRIHKlCO5OXOPC/lZz/gpdApgQAzskqqXp8=", crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js", integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
 
-    title= Breadboard
-  body
+    script.
+      window.seed = {
+        token : "!{token}"
+      }
+      
+    script.
+      if (window.seed.token) {
+        store.set('breadboard_token', window.seed.token);
+      }
+      
+      var token = store.get('breadboard_token');
+      
+    title Breadboard - Community Edition
+  body2
     .container
       header.navbar.navbar-light.navbar-static-top
-        h1.navbar-brand Breadboard
-
+        a.navbar-brand Breadboard
+        
       .jumbotron
         h1.display-3 Breadboard
           | &nbsp;&nbsp;
           i.fa.fa-rocket
         p.lead Community Edition
+        .dropdown
+          button#dropdown-login.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            if user
+              = user.id
+            else
+              | Login
+          .dropdown-menu(aria-labelledby='dropdown-login')
+            each strategy in strategies
+              a.dropdown-item(href=strategy.login_url)= strategy.name
 
-      .card
-        .card-header /github.com/owner/repository/blob/branch/path.js
-        .card-block
-          p.card-text Call a script hosted on github.
-          p.card-text
-            | ex:
-            code /github.com/a7medkamel/taskmill-help/blob/master/helloworld.js
-            | &nbsp;
-            a.btn.btn-primary(href='/github.com/a7medkamel/taskmill-help/blob/master/helloworld.js')
-              i.fa.fa-rocket &nbsp;&nbsp;
-              | Try it!
-              
-      //- .card
-        //- .card-header /run
-        //- .card-block
-        //-   p.card-text To run arbitrary code, set <code>blob</code> header to the base64 encoded script you want to run. Your script will be run and the response returned.
+      p
+        .card
+          .card-header /github.com/owner/repository/blob/branch/path.js
+          .card-block
+            p.card-text Call a script hosted on github.
+            p.card-text
+              | ex:
+              code /github.com/a7medkamel/taskmill-help/blob/master/helloworld.js
+              | &nbsp;
+              a.btn.btn-primary(href='/github.com/a7medkamel/taskmill-help/blob/master/helloworld.js')
+                i.fa.fa-rocket &nbsp;&nbsp;
+                | Try it!
 
+      p
+        .card
+          .card-header GET /ls/github.com/owner/repository.git
+          .card-block
+            p.card-text Lists all the .js files in a given git repository.
+            p.card-text
+              | ex:
+              code /ls/github.com/a7medkamel/taskmill-help.git
+              | &nbsp;
+              a.btn.btn-primary(href='/ls/github.com/a7medkamel/taskmill-help.git')
+                i.fa.fa-list-alt &nbsp;&nbsp;
+                | Try it!
 
-      .card
-        .card-header GET /ls/github.com/owner/repository.git
-        .card-block
-          p.card-text Lists all the .js files in a given git repository.
-          p.card-text
-            | ex:
-            code /ls/github.com/a7medkamel/taskmill-help.git
-            | &nbsp;
-            a.btn.btn-primary(href='/ls/github.com/a7medkamel/taskmill-help.git')
-              i.fa.fa-list-alt &nbsp;&nbsp;
-              | Try it!
-
-      .card
-        .card-header GET /pull/github.com/owner/repository.git
-        .card-block
-          p.card-text Updates the local copy of a given repository by pulling it from it's remote location.
-          p.card-text
-            | ex:
-            code /pull/github.com/a7medkamel/taskmill-help.git
-            | &nbsp;
-            a.btn.btn-primary(href='/pull/github.com/a7medkamel/taskmill-help.git')
-              i.fa.fa-git &nbsp;&nbsp;
-              | Try it!
+      p
+        .card
+          .card-header GET /pull/github.com/owner/repository.git
+          .card-block
+            p.card-text Updates the local copy of a given repository by pulling it from it's remote location.
+            p.card-text
+              | ex:
+              code /pull/github.com/a7medkamel/taskmill-help.git
+              | &nbsp;
+              a.btn.btn-primary(href='/pull/github.com/a7medkamel/taskmill-help.git')
+                i.fa.fa-git &nbsp;&nbsp;
+                | Try it!
+      
+      if user 
+        p   
+          .card
+            .card-header JWT Token
+            .card-block
+              p.card-text You can use this JWT token with your requests to run scripts in private repositories. Set the 'authorization' header to:
+              p.card-text
+                pre= bearer
+                //- | &nbsp;
+                //- a.btn.btn-primary(href='/pull/github.com/a7medkamel/taskmill-help.git')
+                //-   i.fa.fa-git &nbsp;&nbsp;
+                //-   | Try it!

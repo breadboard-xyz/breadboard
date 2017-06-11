@@ -1,30 +1,43 @@
 {
-  "apps" : [{
-    "name"        : "gateway",
-    "script"      : "./node_modules/taskmill-core-gateway/index.js"
-  }, {
-    "name"       : "agent",
-    "script"      : "./node_modules/taskmill-core-agent/index.js"
-  }, {
-    "name"       : "logs",
-    "script"      : "./node_modules/taskmill-core-logs/index.js"
-  }, {
-    "name"       : "account",
-    "script"      : "./node_modules/taskmill-core-account/index.js"
-  }, {
-    "name"       : "cron-scheduler",
-    "script"      : "./node_modules/taskmill-core-cron/lib/scheduler/index.js"
-  }, {
-    "name"       : "cron-clock",
-    "script"      : "./node_modules/taskmill-core-cron/lib/clock/index.js"
-  }, {
-    "name"       : "cron-exec",
-    "script"      : "./node_modules/taskmill-core-cron/lib/exec/index.js"
-  }, {
-    "name"       : "codedb",
-    "script"      : "./node_modules/taskmill-core-codedb/index.js"
-  }, {
-    "name"       : "ui-ce",
-    "script"      : "./index.js"
-  }]
+  "apps": [
+    {
+      "name": "gateway",
+      "script": "./node_modules/taskmill-core-gateway/index.js"
+    },
+    {
+      "name": "agent",
+      "script": "./node_modules/taskmill-core-agent/index.js"
+    },
+    {
+      "name": "logs",
+      "script": "./node_modules/taskmill-core-logs/index.js"
+    },
+    {
+      "name": "account",
+      "script": "./node_modules/taskmill-core-account/index.js",
+      "env": {
+        "NODE_EXTRA_CA_CERTS": "/usr/share/ca-certificates/abc.crt"
+      }
+    },
+    {
+      "name": "cron-scheduler",
+      "script": "./node_modules/taskmill-core-cron/lib/scheduler/index.js"
+    },
+    {
+      "name": "cron-clock",
+      "script": "./node_modules/taskmill-core-cron/lib/clock/index.js"
+    },
+    {
+      "name": "cron-exec",
+      "script": "./node_modules/taskmill-core-cron/lib/exec/index.js"
+    },
+    {
+      "name": "codedb",
+      "script": "./node_modules/taskmill-core-codedb/index.js"
+    },
+    {
+      "name": "ui-ce",
+      "script": "./index.js"
+    }
+  ]
 }
