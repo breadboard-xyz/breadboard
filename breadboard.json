@@ -5,6 +5,10 @@
       "script": "./node_modules/taskmill-core-gateway/index.js"
     },
     {
+      "name": "make",
+      "script": "./node_modules/taskmill-core-make/index.js"
+    },
+    {
       "name": "agent",
       "script": "./node_modules/taskmill-core-agent/index.js"
     },
