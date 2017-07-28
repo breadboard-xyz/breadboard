@@ -33,9 +33,17 @@
       ]
     }
   },
+  "make" : {
+    "url" : "http://localhost:8075",
+    "redis" : {
+      "db": 4,
+      "host": "[REDIS_HOST]",
+      "password": "[PASSWORD]",
+      "port": 6379
+    }
+  },
   "agent": {
     "allow-foreign-code": true,
-    "group-id": "64FD1450-AD09-4643-9A8E-CEB571DF0FE9",
     "url": "http://localhost:8090"
   },
   "backend": {
