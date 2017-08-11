@@ -10,6 +10,7 @@
     },
     {
       "name": "agent",
+      "node_args": "--harmony",
       "script": "./node_modules/taskmill-core-agent/index.js"
     },
     {
@@ -20,7 +21,7 @@
       "name": "account",
       "script": "./node_modules/taskmill-core-account/index.js",
       "env": {
-        "NODE_EXTRA_CA_CERTS": "/usr/share/ca-certificates/abc.crt"
+        "NODE_EXTRA_CA_CERTS": "/usr/share/ca-certificates/docusign/docusignhq.crt"
       }
     },
     {
