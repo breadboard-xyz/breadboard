@@ -21,7 +21,7 @@
       "name": "account",
       "script": "./node_modules/taskmill-core-account/index.js",
       "env": {
-        "NODE_EXTRA_CA_CERTS": "/usr/share/ca-certificates/docusign/docusignhq.crt"
+        "NODE_EXTRA_CA_CERTS": "/usr/share/ca-certificates/abc.crt"
       }
     },
     {
