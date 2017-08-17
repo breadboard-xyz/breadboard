@@ -7,6 +7,15 @@
   "account": {
     "ip-whitelist": [],
     "port": 8050,
+    "mongo"       : {
+      "url"     : "mongodb://[USER]:[PASSWORD]@localhost/account"
+    },
+    "redis" : {
+      "host"          : "[HOST]",
+      "port"          : 6379,
+      "password"      : "[PASSWORD]",
+      "db"            : 8
+    },
     "oauth" : {
       "strategy"  : [
         {
@@ -54,19 +63,50 @@
       "user": "[USER]"
     }
   },
+  "git" : {
+   "hook_url" : "https://www.breadboard.io/githook",
+   "hosts" : [
+     {
+       "hostname" : "github.com",
+       "hook": {
+         "secret" : "[SECRET]"
+       },
+       "options" : {
+         "debug": false,
+         "protocol": "https",
+         "host": "api.github.com",
+         "pathPrefix": null,
+         "headers": {
+           "user-agent": "[USER_AGENT]"
+         },
+         "timeout": 5000
+       }
+     }
+   ]
+  },
   "codedb": {
     "populate": {
       "limit": 100
     },
+    "hook" : {
+      "clean" : false
+    },
     "pull-on-start": true,
     "ttl": 86400,
     "url": "http://localhost:8585",
-    "winston": "info"
+    "winston": "info",
+    "redis" : {
+      "host"          : "[HOST]",
+      "port"          : 6379,
+      "password"      : "[PASSWORD]",
+      "db"            : 3
+    }
   },
   "cron": {
     "exec": {
       "url": "http://localhost:8060"
     },
+    "limit_per_crontab" : 10000,
     "port": "8686",
     "redis": {
       "db": "1",
@@ -78,6 +118,11 @@
     }
   },
   "make": {
+    "url" : "http://make.breadboard.io:8075",
+    "agent": {
+     "sub" : "agent@localhost",
+     "aud" : "make"
+    },
     "redis" : {
       "db": 4,
       "host": "localhost",

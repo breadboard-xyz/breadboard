@@ -29,12 +29,16 @@
     "request": "^2.81.0",
     "taskmill-core-account": "git+https://github.com/a7medkamel/taskmill-core-account.git",
     "taskmill-core-account-sdk": "git+https://github.com/a7medkamel/taskmill-core-account-sdk.git",
-    "taskmill-core-make": "git+https://github.com/a7medkamel/taskmill-core-make.git",
     "taskmill-core-agent": "git+https://github.com/a7medkamel/taskmill-core-agent.git",
     "taskmill-core-codedb": "git+https://github.com/a7medkamel/taskmill-core-codedb.git",
+    "taskmill-core-codedb-sdk": "git+https://github.com/a7medkamel/taskmill-core-codedb-sdk.git",
     "taskmill-core-cron": "git+https://github.com/a7medkamel/taskmill-core-cron.git",
     "taskmill-core-gateway": "git+https://github.com/a7medkamel/taskmill-core-gateway.git",
     "taskmill-core-logs": "git+https://github.com/a7medkamel/taskmill-core-logs.git",
+    "taskmill-core-make": "git+https://github.com/a7medkamel/taskmill-core-make.git",
     "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "jwtgen": "^2.2.0"
   }
 }

@@ -27,7 +27,7 @@ html(lang="en")
       var token = store.get('breadboard_token');
       
     title Breadboard - Community Edition
-  body2
+  body
     .container
       header.navbar.navbar-light.navbar-static-top
         a.navbar-brand Breadboard
@@ -87,6 +87,17 @@ html(lang="en")
                 | Try it!
       
       if user 
+        p   
+          .card
+            .card-header Generate Key
+            .card-block
+              p.card-text 
+                | You can use this Key which doesn't expire instead of a JWT. Add it to your requests to run scripts in private repositories.
+              p.card-text 
+                a.btn.btn-primary(href='/key')
+                  i.fa.fa-key &nbsp;&nbsp;
+                  | Generate Key!
+                
         p   
           .card
             .card-header JWT Token
