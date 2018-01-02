@@ -1,0 +1,13 @@
+extends ../layout/common.pug
+
+block append content    
+  .container  
+    p
+      .card
+        .card-header= model.repository.remote
+        ul.list-group.list-group-flush
+          each item in model.data
+            li.list-group-item
+              i.fa.fa-file-text-o
+              | &nbsp;
+              a(href=item.href)= item.path

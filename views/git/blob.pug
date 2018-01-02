@@ -1,0 +1,52 @@
+extends ../layout/common.pug
+
+block append scripts
+  script(src="/js/bundle.js")
+
+  script.
+    /*content should be base64 in case there is a <> in script*/
+    var model = !{JSON.stringify(model)};
+    
+  script.
+    var ide = new Breadboard.default();
+
+    $(function() {
+      ide.render($('.ide')[0], {
+          host          : '#{parsed.host}'
+        , owner         : '#{parsed.owner}'
+        , repo          : '#{parsed.repository}'
+        , branch        : model.branch
+        , http_method   : 'GET'
+        //- , http_body     : JSON.stringify({})
+        , blob          : model.content
+        //- todo [akamel] point to the correct breadboard server
+        //- , breadboard    : model.run_url
+      });
+      
+      /*{
+        "content": "module.exports = function(req, res, next) {\n  res.send('Hello World!');\n};\n",
+        "branch": "master",
+        "path": "/helloworld.js",
+        "repository": {
+          "githook": "***REMOVED***",
+          "remote": "https://github.com/a7medkamel/taskmill-help.git",
+          "acl.***REMOVED***": "true",
+          "acl.*": "true"
+        },
+        "remote": "https://github.com/a7medkamel/taskmill-help.git"
+      }*/
+    });
+    
+block append content    
+  //- .container
+  //-   pre= JSON.stringify(model, null, 2)
+  //-   pre= JSON.stringify(parsed, null, 2)
+  .container
+    nav(aria-label="breadcrumb", role="navigation")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item= parsed.owner
+        li.breadcrumb-item.active(aria-current="page")
+          a(href="/" + parsed.host + "/" + parsed.owner + "/" + parsed.repository)= parsed.repository
+  .ide

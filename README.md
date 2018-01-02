@@ -28,3 +28,6 @@ https://www.cyberciti.biz/faq/test-ssl-certificates-diagnosis-ssl-certificate/
     "NODE_EXTRA_CA_CERTS" : "/usr/share/ca-certificates/abc.crt"
  }
 ```
+
+### nodegit setup issues
+https://github.com/JustinTulloss/zeromq.node/issues/283

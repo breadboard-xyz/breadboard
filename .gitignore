@@ -52,3 +52,6 @@ config/local.js
 data/key
 
 data/key.pub
+local*
+key.pem
+agent.jwt
