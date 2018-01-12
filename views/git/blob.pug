@@ -20,7 +20,7 @@ block append scripts
         //- , http_body     : JSON.stringify({})
         , blob          : model.content
         //- todo [akamel] point to the correct breadboard server
-        //- , breadboard    : model.run_url
+        , breadboard    : '#{breadboard_url}'
       });
     });
     
@@ -28,6 +28,7 @@ block append content
   //- .container
   //-   pre= JSON.stringify(model, null, 2)
   //-   pre= JSON.stringify(parsed, null, 2)
+  //-   pre= JSON.stringify(breadboard_url, null, 2)
   .container
     nav(aria-label="breadcrumb", role="navigation")
       ol.breadcrumb
