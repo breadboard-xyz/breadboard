@@ -16,11 +16,12 @@ block append scripts
         , owner         : '#{parsed.owner}'
         , repo          : '#{parsed.repository}'
         , branch        : model.branch
+        , breadboard    : '#{breadboard}'
+        , token         : '#{token}'
         , http_method   : 'GET'
         //- , http_body     : JSON.stringify({})
         , blob          : model.content
         //- todo [akamel] point to the correct breadboard server
-        , breadboard    : '#{breadboard_url}'
       });
     });
     
