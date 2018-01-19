@@ -17,6 +17,7 @@ block append scripts
         , repo          : '#{parsed.repository}'
         , branch        : model.branch
         , breadboard    : '#{breadboard}'
+        , platform      : '#{parsed.platform}'
         , token         : '#{token}'
         , http_method   : 'GET'
         //- , http_body     : JSON.stringify({})
@@ -26,10 +27,10 @@ block append scripts
     });
     
 block append content    
-  //- .container
-  //-   pre= JSON.stringify(model, null, 2)
-  //-   pre= JSON.stringify(parsed, null, 2)
-  //-   pre= JSON.stringify(breadboard_url, null, 2)
+  .container
+    //- pre= JSON.stringify(model, null, 2)
+    //- pre= JSON.stringify(parsed, null, 2)
+    //- pre= JSON.stringify(breadboard_url, null, 2)
   .container
     nav(aria-label="breadcrumb", role="navigation")
       ol.breadcrumb
