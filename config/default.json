@@ -100,7 +100,8 @@
       "port"          : 6379,
       "password"      : "[PASSWORD]",
       "db"            : 3
-    }
+    },
+    "file_size_limit" : 10000
   },
   "cron": {
     "exec": {
