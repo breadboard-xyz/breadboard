@@ -25,16 +25,12 @@
       }
     },
     {
-      "name": "cron-scheduler",
-      "script": "./node_modules/taskmill-core-cron/lib/scheduler/index.js"
+      "name"   : "clock",
+      "script" : "./node_modules/crontab.io/program/clock.js"
     },
     {
-      "name": "cron-clock",
-      "script": "./node_modules/taskmill-core-cron/lib/clock/index.js"
-    },
-    {
-      "name": "cron-exec",
-      "script": "./node_modules/taskmill-core-cron/lib/exec/index.js"
+      "name"   : "scheduling",
+      "script" : "./node_modules/crontab.io/program/scheduling.js"
     },
     {
       "name": "codedb",

@@ -112,7 +112,8 @@
     "redis": {
       "db": "1",
       "host": "localhost",
-      "port": 6379
+      "port": 6379,
+      "password": null
     },
     "winston": {
       "level": "info"
