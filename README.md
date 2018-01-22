@@ -16,17 +16,15 @@ sudo vi /etc/sysctl.conf
 net.ipv4.ip_forward=1
 
 ```
-/*list rules:*/
-/*sudo iptables -L -vt nat*/
-
-sudo iptables -t nat -A PREROUTING -i ens3 -p tcp --dport 80 -j REDIRECT --to-port 8040
-
-/*https://serverfault.com/questions/211536/iptables-port-redirect-not-working-for-localhost*/
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8040
 sudo iptables -t nat -I OUTPUT -p tcp -o lo --dport 80 -j REDIRECT --to-ports 8040
 ```
 
-<!-- sudo iptables -D FORWARD -i docker0 -o ens3 -j ACCEPT
-sudo iptables -D FORWARD -i ens3 -o docker0 -j ACCEPT -->
+#### List all preroute rules
+https://stackoverflow.com/questions/41479879/how-to-check-prerouting-list-from-iptable-in-linux
+```
+iptables -L -n -t nat
+```
 
 ### Install CERT CHAIN
 https://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate
