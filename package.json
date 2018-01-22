@@ -38,11 +38,12 @@
     "taskmill-core-agent": "git+https://github.com/a7medkamel/taskmill-core-agent.git",
     "taskmill-core-codedb": "git+https://github.com/a7medkamel/taskmill-core-codedb.git",
     "taskmill-core-codedb-sdk": "git+https://github.com/a7medkamel/taskmill-core-codedb-sdk.git",
-    "taskmill-core-cron": "git+https://github.com/a7medkamel/taskmill-core-cron.git",
+    "crontab.io": "git+https://github.com/a7medkamel/crontab.io.git",
     "taskmill-core-gateway": "git+https://github.com/a7medkamel/taskmill-core-gateway.git",
     "taskmill-core-git": "git+https://github.com/a7medkamel/taskmill-core-git.git",
     "taskmill-core-logs": "git+https://github.com/a7medkamel/taskmill-core-logs.git",
     "taskmill-core-make": "git+https://github.com/a7medkamel/taskmill-core-make.git",
+    "ua-parser-js": "^0.7.17",
     "url-join": "^2.0.2",
     "viz.js": "^1.8.0",
     "winston": "^2.3.1"
