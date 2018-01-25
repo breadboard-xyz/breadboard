@@ -4,6 +4,9 @@
       "[SECRET]"
     ]
   },
+  "tailf" : {
+    "url" : "https://tailf.io"
+  },
   "account": {
     "ip-whitelist": [],
     "port": 8050,
