@@ -24,7 +24,7 @@
         {
           "module"        : "passport-github2",
           "name"          : "github",
-          "callback"      : "https://account.breadboard.com/auth/github/callback",
+          "callback"      : "http://account.breadboard.com/auth/github/callback",
           "options"       : {
             "clientID"          : "[GITHUB_APP_IP]",
             "clientSecret"      : "[GITHUB_APP_SECRET]",
