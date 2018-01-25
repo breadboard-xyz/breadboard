@@ -12,15 +12,15 @@ block append scripts
 
     $(function() {
       ide.render($('.ide')[0], {
-          host          : !{JSON.stringify(parsed.host || null)}
-        , owner         : !{JSON.stringify(parsed.owner || null)}
-        , repo          : !{JSON.stringify(parsed.repository || null)}
+          host          : !{JSON.stringify(parsed.host) || 'undefined'}
+        , owner         : !{JSON.stringify(parsed.owner) || 'undefined'}
+        , repo          : !{JSON.stringify(parsed.repository) || 'undefined'}
         , branch        : model.branch
-        , breadboard    : !{JSON.stringify(breadboard || null)}
-        , platform      : !{JSON.stringify(parsed.platform || null)}
-        , token         : !{JSON.stringify(token || null)}
+        , breadboard    : !{JSON.stringify(breadboard) || 'undefined'}
+        , platform      : !{JSON.stringify(parsed.platform) || 'undefined'}
+        , token         : !{JSON.stringify(token) || 'undefined'}
         , http_method   : "GET"
-        , tailf         : !{JSON.stringify(tailf || null)}
+        , tailf         : !{JSON.stringify(tailf) || 'undefined'}
         //- , http_body     : JSON.stringify({})
         , blob          : model.content
         //- todo [akamel] point to the correct breadboard server
