@@ -28,10 +28,9 @@ block append scripts
     });
     
 block append content    
-  .container
-    //- pre= JSON.stringify(model, null, 2)
-    //- pre= JSON.stringify(parsed, null, 2)
-    //- pre= JSON.stringify(breadboard_url, null, 2)
+  //- .container
+  //-   pre= JSON.stringify(model, null, 2)
+  //-   pre= JSON.stringify(parsed, null, 2)
   .container
     nav(aria-label="breadcrumb", role="navigation")
       ol.breadcrumb
@@ -40,4 +39,9 @@ block append content
         li.breadcrumb-item= parsed.owner
         li.breadcrumb-item.active(aria-current="page")
           a(href="/" + parsed.host + "/" + parsed.owner + "/" + parsed.repository)= parsed.repository
+  .container
+    nav(aria-label="breadcrumb", role="navigation")
+      button.btn.btn-light(type="button")= parsed.branch
+      button.btn.btn-link(type="button", href="/" + parsed.host + "/" + parsed.owner + "/" + parsed.repository)= parsed.repository
+      button.btn.btn-link(type="button", disabled="")= "/" + parsed.filename
   .ide
