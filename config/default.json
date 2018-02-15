@@ -104,7 +104,8 @@
       "password"      : "[PASSWORD]",
       "db"            : 3
     },
-    "file_size_limit" : 10000
+    "file_size_limit" : 10000,
+    "git_archive_limit" : 20971520
   },
   "cron": {
     "exec": {
