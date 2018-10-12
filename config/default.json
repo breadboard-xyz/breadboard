@@ -15,5 +15,8 @@
   },
   "codedb": {
     "port": 8585
+  },
+  "gateway": {
+    "port": 8070
   }
 }
