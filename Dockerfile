@@ -16,5 +16,5 @@ RUN rm -rf ./node_modules
 
 COPY --from=builder /src/node_modules ./node_modules
 
-EXPOSE 8070
+EXPOSE 8040
 CMD [ "node", "index.js" ]
