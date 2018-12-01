@@ -15,12 +15,12 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/a7medkamel/breadboard/issues"
+    "url": "https://github.com/breadboard-xyz/breadboard/issues"
   },
-  "homepage": "https://github.com/a7medkamel/breadboard#readme",
+  "homepage": "https://github.com/breadboard-xyz/breadboard#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
-    "breadboard-sdk-web": "git+https://github.com/a7medkamel/breadboard-sdk-web.git",
+    "breadboard-sdk-web": "git+https://github.com/breadboard-xyz/breadboard-sdk-web.git",
     "chalk": "^2.4.1",
     "config-url": "git+https://github.com/a7medkamel/config-url.git",
     "cookie-session": "^2.0.0-beta.3",
@@ -33,9 +33,9 @@
     "pug": "^2.0.3",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
-    "taskmill-core-account-sdk": "git+https://github.com/a7medkamel/taskmill-core-account-sdk.git",
-    "taskmill-core-codedb-sdk": "git+https://github.com/a7medkamel/taskmill-core-codedb-sdk.git",
-    "taskmill-core-git": "git+https://github.com/a7medkamel/taskmill-core-git.git",
+    "taskmill-core-account-sdk": "git+https://github.com/breadboard-xyz/taskmill-core-account-sdk.git",
+    "taskmill-core-codedb-sdk": "git+https://github.com/breadboard-xyz/taskmill-core-codedb-sdk.git",
+    "taskmill-core-git": "git+https://github.com/breadboard-xyz/taskmill-core-git.git",
     "ua-parser-js": "^0.7.18",
     "url-join": "^4.0.0",
     "viz.js": "^2.0.0",
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "jwtgen": "^2.2.0",
-    "webpack": "^4.17.1"
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.2"
   }
 }
