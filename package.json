@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "start": "pm2 start breadboard.json"
+    "start": "webpack --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "winston": "^3.0.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
     "jwtgen": "^2.2.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.2"
