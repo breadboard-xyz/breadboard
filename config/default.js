@@ -4,6 +4,7 @@ var fs    = require('fs')
 
 module.exports = {
   "session" : {
+    "name" : "session",
     "maxAge" : ms('7d'),
     "keys" : [
       '[KEY]'
